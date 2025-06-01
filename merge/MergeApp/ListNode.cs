@@ -38,7 +38,7 @@ public class ListNode
 
     }
 
-    private  static ListNode MergeKListsHelper(ListNode[] lists, int left, int right)
+    private static ListNode MergeKListsHelper(ListNode[] lists, int left, int right)
     {
         if (left == right) return lists[left];
 
@@ -61,15 +61,17 @@ public class ListNode
 
     }
 
-    public static void PrintList(ListNode head)
+    ppublic static void PrintList(ListNode head)
     {
+        Console.Write("[");
         while (head != null)
         {
-            Console.Write(head.val + " -> ");
+            Console.Write(head.val);
             head = head.next;
+            if (head != null)
+                Console.Write(",");
         }
-        Console.WriteLine("null");
-
+        Console.WriteLine("]");
     }
 
 
